@@ -1,0 +1,491 @@
+body {
+    align-items: center;
+    color: white;
+    font-family: 'Noto Serif JP', serif;
+    background-color: rgba(0, 0, 0);
+    position: relative;
+}
+
+h1 {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.block {
+    padding: 30px;
+}
+
+/* Sections General */
+
+.section-title h2 {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1px;
+    margin: 0 0 20px 0;
+    letter-spacing: 2px;
+    color: #aaaaaa;
+    font-family: 'Noto Sans JP', sans-serif;
+
+
+}
+
+.section-title h2::after {
+    content: "";
+    width: 270px;
+    height: 1.5px;
+    display: inline-block;
+    background: #ffd000;
+    margin: 5px 10px;
+}
+
+.section-title p {
+    margin: -15px 0 15px 0;
+    font-size: 27px;
+    font-weight: 700;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #fff;
+}
+
+/* Sections General */
+
+/* navbar */
+
+#navbar {
+    display: flex;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+}
+
+#navbar-main {
+    width: 300px;
+}
+
+.navbar-fold {
+    cursor: pointer;
+    transform: scale(0.5);
+    position: relative;
+    top: -30px;
+    left: -60px;
+}
+
+#navbox {
+    position: relative;
+    top: -60px;
+    left: 30px;
+    border-style: double;
+    border-color: white;
+    background-color: black;
+    width: 220px;
+
+}
+
+.nav-li-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.navbar-nav h5 {
+    opacity: 0.8;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #aaaaaa;
+}
+
+.nav-item:hover h5 {
+    color: #ffd000;
+    opacity: 1;
+}
+
+.nav-item:hover .nav-li-title {
+    color: #ffd000;
+}
+
+.nav-li-slide {
+    width: 0;
+    background: #ffd000;
+    height: 0.15rem;
+    margin: 3px;
+}
+
+
+.nav-item:hover .nav-li-slide {
+    animation: lineAnimation 0.5s ease-in-out forwards;
+
+}
+
+@keyframes lineAnimation {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 5rem;
+    }
+}
+
+.nav-li-title {
+    font-family: 'Noto Serif JP', serif;
+    color: white;
+}
+
+svg {
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.active svg {
+    transform: rotate(90deg);
+}
+
+path {
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dasharray 500ms cubic-bezier(0.4, 0, 0.2, 1),
+        stroke-dashoffset 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+path:nth-child(1) {
+    transform-origin: 36% 40%;
+}
+
+path:nth-child(2) {
+    stroke-dasharray: 29 299;
+}
+
+path:nth-child(3) {
+    transform-origin: 35% 63%;
+}
+
+path:nth-child(4) {
+    stroke-dasharray: 29 299;
+}
+
+path:nth-child(5) {
+    transform-origin: 61% 52%;
+}
+
+path:nth-child(6) {
+    transform-origin: 62% 52%;
+}
+
+.active path:nth-child(1) {
+    transform: translateX(9px) translateY(1px) rotate(45deg);
+}
+
+.active path:nth-child(2) {
+    stroke-dasharray: 225 299;
+    stroke-dashoffset: -72px;
+}
+
+.active path:nth-child(3) {
+    transform: translateX(9px) translateY(1px) rotate(-45deg);
+}
+
+.active path:nth-child(4) {
+    stroke-dasharray: 225 299;
+    stroke-dashoffset: -72px;
+}
+
+.active path:nth-child(5) {
+    transform: translateX(9px) translateY(1px) rotate(-45deg);
+}
+
+.active path:nth-child(6) {
+    transform: translateX(9px) translateY(1px) rotate(45deg);
+}
+
+/* navbar */
+
+/* Home */
+
+#Home {
+    position: relative;
+
+}
+
+.carousel {
+    position: relative;
+    z-index: 1;
+}
+
+#darklay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+
+}
+
+#Logo {
+    height: 100px;
+    position: absolute;
+    left: 20%;
+    top: 30%;
+}
+
+#Logo h4 {
+    padding-left: 30px;
+}
+
+#banner {
+
+    text-align: center;
+    border: 1.5px solid #ffffff;
+    border-left: none;
+    border-right: none;
+    max-width: 450px;
+
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin-bottom: 30px;
+
+}
+
+#banner-box {
+    max-width: 450px;
+
+}
+
+#banner img {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+
+    #banner {
+        scale: 0.5;
+    }
+}
+
+
+/* Home */
+
+
+
+/* About */
+
+#About {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(/image/bg/03.png);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1.5px solid #625b57;
+    border-left: none;
+    border-right: none;
+
+}
+
+.about-me {
+    margin: 0 auto;
+
+}
+
+.about-me .content h3 {
+    font-weight: 700;
+    font-size: 30px;
+    color: #ffd000;
+}
+
+.about-me .content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-me .content ul li {
+    display: flex;
+    align-items: center;
+}
+
+.about-me .content ul i {
+    font-size: 15px;
+    color: #ffd000;
+    line-height: 0;
+}
+
+.text-title {
+    color: #ffd000;
+}
+
+#cube-box {
+    position: relative;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+
+}
+
+#cube {
+    position: relative;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.row {
+    padding: 15px;
+}
+
+
+.skills {
+    border: 1px solid #ffd000;
+    scale: 0.9;
+    padding-top: 15px;
+}
+
+.skills .progress {
+    height: 60px;
+    display: block;
+    background: none;
+    border-radius: 0;
+}
+
+.skills .progress .skill {
+    margin: 0;
+    display: block;
+    font-weight: 600;
+    font-size: medium;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #fff;
+}
+
+.skills .progress .skill .val {
+    float: right;
+    font-style: normal;
+}
+
+.skills .progress-bar-wrap {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.skills .progress-bar {
+    width: 1px;
+    height: 10px;
+    transition: 0.9s;
+    background-color: #ffd000;
+}
+
+/* About */
+
+/* Game */
+
+#Game {
+
+
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(/image/bg/04.png);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.game-image {
+    margin: 0 auto;
+}
+
+.game-info {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+
+    padding: 30px;
+}
+
+.game-btn {
+    height: 100px;
+}
+
+.btn {
+    width: 200px;
+    height: 50px;
+    position: relative;
+    margin: 0 auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#carouselGame {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Gallery */
+
+
+#Gallery {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+    background-image: url(/image/bg/00.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1.5px solid #625b57;
+    border-left: none;
+    border-right: none;
+
+}
+
+
+/* Gallery */
+
+/* footer */
+
+#footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #ffd000;
+}
+
+#footer .socials-media {
+    width: 100%;
+}
+
+#footer .socials-media ul {
+    display: inline-block;
+    float: none;
+    margin: 0 0 20px 0;
+}
+
+#footer .socials-media ul li {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#footer .socials-media ul li a {
+    font-size: 24px;
+    color: white;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    background: transparent;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+#footer .socials-media ul li a:hover {
+    color: #ffd000;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+#footer p {
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    margin-top: 0;
+}
+
+
+/* footer */
